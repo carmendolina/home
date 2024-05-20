@@ -1,0 +1,126 @@
+:root {
+    --cream: rgb(255, 251, 225);
+    --hotpink: rgb(215, 22, 118);
+    --lightpink: rgb(239, 116, 188);
+    --yellow: rgb(255, 187, 0);
+    --purple: rgb(150, 28, 184);
+}
+
+.yarndings-12-regular {
+    font-family: "Yarndings 12", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.hanken-grotesk-light {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.hanken-grotesk-reg {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hanken-grotesk-med {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+html, main, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--cream);
+    color: var(--hotpink);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h1 {
+    padding: 1vh 0;
+    margin: 0;
+}
+
+h1.hanken-grotesk-light {
+    font-size: 104px;
+    letter-spacing: -1.5px;
+}
+
+h2.hanken-grotesk-light {
+    font-size: 65px;
+    letter-spacing: -0.5px;
+}
+
+h3.hanken-grotesk-reg {
+    font-size: 52px;
+    letter-spacing: 0px;
+}
+
+h4.hanken-grotesk-reg {
+    font-size: 37px;
+    letter-spacing: 0.25px;
+}
+
+h5.hanken-grotesk-reg {
+    font-size: 26px;
+    letter-spacing: 0px;
+}
+
+h6.hanken-grotesk-med {
+    font-size: 22px;
+    letter-spacing: 0.15px;
+}
+
+.subtitle.hanken-grotesk-reg {
+    font-size: 17px;
+    letter-spacing: 0.15px;
+}
+
+.subtitle.hanken-grotesk-med {
+    font-size: 15px;
+    letter-spacing: 0.1px;
+}
+
+p.hanken-grotesk-reg {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+}
+
+button.hanken-grotesk-med {
+    font-size: 15px;
+    letter-spacing: 1.25px;
+}
+
+#tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: max-content;
+    gap: 1px 1px;
+    background-color: var(--hotpink);
+}
+
+#tabs h3 {
+    padding: 0;
+    margin: 0;
+    background-color: var(--cream);
+    transition: 100ms ease-in-out;
+    padding: 0 1vw;
+}
+
+#tabs h3:hover {
+    color: var(--cream);
+    background-color: var(--hotpink);
+    transition: 100ms ease-in-out;
+    cursor: pointer;
+}
