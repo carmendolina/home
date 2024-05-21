@@ -219,6 +219,7 @@ h5 {
 .imgContainer.gridImage {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 4px 0;
 }
 
 .tag {
