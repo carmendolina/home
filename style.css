@@ -40,6 +40,7 @@ html, main, body {
     height: 100%;
     background-color: var(--cream);
     color: var(--hotpink);
+    overflow: hidden;
 }
 
 main {
@@ -51,23 +52,19 @@ main {
 }
 
 h1 {
-    padding: 1vh 0;
+    padding: 4px 8px;
     margin: 0;
     grid-column: 1 / span 2;
     background-color: var(--cream);
+    font-size: 104px;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    line-height: 96px;
 }
 
 p {
     padding: 0;
     margin: 0;
-}
-
-h1.hanken-grotesk-light {
-    font-size: 104px;
-    letter-spacing: -1.5px;
-    text-transform: uppercase;
-    padding: 0 1vw;
-    line-height: 96px;
 }
 
 h2 {
@@ -84,6 +81,28 @@ h3 {
     text-transform: uppercase;
 }
 
+h4 {
+    margin: 0;
+    font-size: 37px;
+    line-height: 44px;
+    letter-spacing: 0.25px;
+}
+
+h5 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+
+.subtitle {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+}
+
 #tabs {
     display: grid;
     grid-template-columns: 1fr;
@@ -92,11 +111,18 @@ h3 {
     background-color: var(--hotpink);
 }
 
-#tabs h3, #tabs h2, #content {
+#tabs h3, #tabs h2 {
     margin: 0;
     background-color: var(--cream);
     transition: 100ms ease-in-out;
-    padding: 1vh 1vw;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+#content {
+    margin: 0;
+    background-color: var(--cream);
+    padding: 0 8px;
     border-radius: 5px;
 }
 
@@ -107,14 +133,31 @@ h3 {
     cursor: pointer;
 }
 
-img {
-    pointer-events: none;
-}
-
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 .visible {
-    display: block;
+    display: grid;
+}
+
+.content {
+    overflow-y: scroll;
+}
+
+.postContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.post {
+    display: grid;
+    /* grid-template-columns: 2fr 1fr; */
+    gap: 0 2vw;
+}
+
+.post .images img {
+    pointer-events: none;
+    width: 100%;
+    border-radius: 5px;
 }
