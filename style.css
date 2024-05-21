@@ -116,7 +116,7 @@ h3 {
 h4 {
     margin: 0;
     font-size: 37px;
-    line-height: 44px;
+    line-height: 40px;
     letter-spacing: 0.25px;
 }
 
@@ -129,7 +129,8 @@ h5 {
 
 .subtitle {
     margin: 0 0 0 2px;
-    padding: 0;
+    display: block;
+    padding: 4px 0 2px;
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.15px;
@@ -201,7 +202,7 @@ h5 {
 }
 
 .post .images img {
-    margin: 8px;
+    margin: 0 8px 8px;
     padding: 0;
     width: calc(100% - 18px);
     height: calc(100% - 18px);
@@ -219,7 +220,7 @@ h5 {
     background-color: var(--hotpink);
     color: var(--cream);
     padding: 4px 8px;
-    margin: 8px 0 0;
+    margin: 8px 0;
     border-radius: 2px;
     display: inline-block;
     font-size: 14px;
@@ -228,17 +229,29 @@ h5 {
 }
 
 .desc {
-    width: 30%;
+    width: 35%;
     z-index: 1;
     background-color: var(--cream);
     border: 1px solid var(--hotpink);
     border-bottom: none;
     justify-self: right;
-    margin: -50px 50px 0 0;
+    margin: -60px 50px 0 0;
     padding: 12px 16px;
     border-radius: 5px 5px 0 0;
 }
 
 .titles {
     margin: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--hotpink);
+    transition: 100ms ease-in-out;
+}
+
+a:hover {
+    cursor: alias;
+    color: var(--purple);
+    transition: 100ms ease-in-out;
 }
