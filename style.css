@@ -36,15 +36,16 @@
 html, main, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: var(--cream);
     color: var(--hotpink);
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: max-content auto;
     gap: 1px 1px;
     background-color: var(--hotpink);
 }
@@ -52,6 +53,8 @@ main {
 h1 {
     padding: 1vh 0;
     margin: 0;
+    grid-column: 1 / span 2;
+    background-color: var(--cream);
 }
 
 p {
@@ -63,7 +66,6 @@ h1.hanken-grotesk-light {
     font-size: 104px;
     letter-spacing: -1.5px;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--hotpink);
     padding: 0 1vw;
     line-height: 96px;
 }
