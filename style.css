@@ -1,9 +1,24 @@
 :root {
-    --cream: rgb(255, 251, 225);
+    --cream: rgb(254, 255, 237);
     --hotpink: rgb(215, 22, 118);
     --lightpink: rgb(239, 116, 188);
     --yellow: rgb(255, 187, 0);
     --purple: rgb(150, 28, 184);
+}
+
+@font-face {
+    font-family: Redaction-Italic;
+    src: url(type/Redaction50-Italic.otf);
+}
+
+@font-face {
+    font-family: Redaction-Regular;
+    src: url(type/Redaction50-Regular.otf);
+}
+
+@font-face {
+    font-family: Redaction-Bold;
+    src: url(type/Redaction50-Bold.otf);
 }
 
 .yarndings-12-regular {
@@ -52,17 +67,34 @@ main {
 }
 
 h1 {
-    padding: 4px 8px;
+    padding: 4px 10px 0;
+    /* margin: -16px 0 0; */
     margin: 0;
     grid-column: 1 / span 2;
     background-color: var(--cream);
-    font-size: 104px;
-    letter-spacing: -1.5px;
+    font-size: 96px;
+    /* letter-spacing: -1.5px; */
     text-transform: uppercase;
-    line-height: 96px;
+    /* line-height: 96px; */
+}
+
+.redaction-bold {
+    font-family: Redaction-Bold;
+    font-weight: 500;
+}
+
+.redaction-reg {
+    font-family: Redaction-Regular;
+    font-weight: 400;
+}
+
+.redaction-italic {
+    font-family: Redaction-Italic;
+    font-weight: 400;
 }
 
 p {
+    font-size: 20px;
     padding: 0;
     margin: 0;
 }
@@ -101,6 +133,7 @@ h5 {
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.15px;
+    text-transform: uppercase;
 }
 
 #tabs {
@@ -141,8 +174,8 @@ h5 {
     display: grid;
 }
 
-.content {
-    overflow-y: scroll;
+#content {
+    overflow: scroll !important;
 }
 
 .postContainer {
@@ -153,11 +186,42 @@ h5 {
 .post {
     display: grid;
     /* grid-template-columns: 2fr 1fr; */
-    gap: 0 2vw;
+    gap: 5px 0;
+    margin: 0 0 5px 0;
+}
+
+.post .images {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.imgContainer {
+    border-radius: 5px;
+    padding: 8px 0;
 }
 
 .post .images img {
-    pointer-events: none;
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 50%;
+    border: 1px solid var(--hotpink);
+    transition: 100ms ease-in-out;
+}
+
+.post .images img:hover {
     border-radius: 5px;
+    transition: 100ms ease-in-out;
+}
+
+.tag {
+    background-color: var(--hotpink);
+    color: var(--cream);
+    padding: 4px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
