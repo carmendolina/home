@@ -45,6 +45,8 @@ html, main, body {
 main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1px 1px;
+    background-color: var(--hotpink);
 }
 
 h1 {
@@ -55,51 +57,24 @@ h1 {
 h1.hanken-grotesk-light {
     font-size: 104px;
     letter-spacing: -1.5px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--hotpink);
+    padding: 0 1vw;
+    line-height: 96px;
 }
 
-h2.hanken-grotesk-light {
+h2 {
     font-size: 65px;
     letter-spacing: -0.5px;
+    line-height: 70px;
+    text-transform: uppercase;
 }
 
-h3.hanken-grotesk-reg {
+h3 {
     font-size: 52px;
+    line-height: 54px;
     letter-spacing: 0px;
-}
-
-h4.hanken-grotesk-reg {
-    font-size: 37px;
-    letter-spacing: 0.25px;
-}
-
-h5.hanken-grotesk-reg {
-    font-size: 26px;
-    letter-spacing: 0px;
-}
-
-h6.hanken-grotesk-med {
-    font-size: 22px;
-    letter-spacing: 0.15px;
-}
-
-.subtitle.hanken-grotesk-reg {
-    font-size: 17px;
-    letter-spacing: 0.15px;
-}
-
-.subtitle.hanken-grotesk-med {
-    font-size: 15px;
-    letter-spacing: 0.1px;
-}
-
-p.hanken-grotesk-reg {
-    font-size: 17px;
-    letter-spacing: 0.5px;
-}
-
-button.hanken-grotesk-med {
-    font-size: 15px;
-    letter-spacing: 1.25px;
+    text-transform: uppercase;
 }
 
 #tabs {
@@ -110,17 +85,21 @@ button.hanken-grotesk-med {
     background-color: var(--hotpink);
 }
 
-#tabs h3 {
-    padding: 0;
+#tabs h3, #tabs h2, #content {
     margin: 0;
     background-color: var(--cream);
     transition: 100ms ease-in-out;
-    padding: 0 1vw;
+    padding: 1vh 1vw;
+    border-radius: 5px;
 }
 
-#tabs h3:hover {
+#tabs h3:hover, #tabs h2:hover {
     color: var(--cream);
     background-color: var(--hotpink);
     transition: 100ms ease-in-out;
     cursor: pointer;
+}
+
+img {
+    pointer-events: none;
 }
