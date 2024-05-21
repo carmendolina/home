@@ -100,7 +100,7 @@ h3 {
     border-radius: 5px;
 }
 
-#tabs h3:hover, #tabs h2:hover {
+#tabs h3:hover, #tabs h2:hover, .current {
     color: var(--cream);
     background-color: var(--hotpink);
     transition: 100ms ease-in-out;
