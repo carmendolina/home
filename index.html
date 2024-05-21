@@ -45,21 +45,58 @@
         </h1>
         <main>
             <section id="tabs">
-                <h3 class="hanken-grotesk-reg">
+                <h3 class="button hanken-grotesk-reg">
                     web/game <span style="text-transform: lowercase;" class="yarndings-12-regular">x</span> designer and developer
                 </h3>
-                <h3 class="hanken-grotesk-reg">
+                <h3 class="button hanken-grotesk-reg">
                     graphic designer <span style="text-transform: lowercase;" class="yarndings-12-regular">q</span> and <span style="text-transform: lowercase;" class="yarndings-12-regular">u</span> visual artist
                 </h3>
-                <h3 class="hanken-grotesk-reg">
+                <h3 class="button hanken-grotesk-reg">
                     published poet <span style="text-transform: lowercase;" class="yarndings-12-regular">b</span>
                 </h3>
             </section>
             <section id="content">
-                <p>hi</p>
+                <section class="invisible" id="web">web</section>
+                <section class="invisible" id="art">art</section>
+                <section class="invisible" id="poems">poems</section>
             </section>
         </main>
     </body>
     <script>
+        var contentSection = document.getElementById("content");
+        var allContentSections = contentSection.children;
+        var allButtons = document.getElementsByClassName("button");
+        var visibleSections = document.getElementsByClassName("visible");
+        var invisibleSections = document.getElementsByClassName("invisible");
+
+        console.log(allContentSections);
+
+        for(let i = 0; i < allButtons.length; i++) {
+            allButtons[i].addEventListener('click', () =>
+                {
+                    // resets content section
+                    for(let j = 0; j < allContentSections.length; j++) {
+                        if(allContentSections[j] != allContentSections[i]) {
+                            allContentSections[j].classList.remove("visible");
+                            allContentSections[j].classList.add("invisible");
+                            visibleSections = document.getElementsByClassName("visible");
+                            invisibleSections = document.getElementsByClassName("invisible");
+                        }
+                    }
+                    // selects and deselects
+                    if(allContentSections[i].classList.contains("visible")) {
+                        allContentSections[i].classList.remove("visible");
+                        allContentSections[i].classList.add("invisible");
+                        visibleSections = document.getElementsByClassName("visible");
+                        invisibleSections = document.getElementsByClassName("invisible");
+                    } else {
+                        allContentSections[i].classList.remove("invisible");
+                        allContentSections[i].classList.add("visible");
+                        visibleSections = document.getElementsByClassName("visible");
+                        invisibleSections = document.getElementsByClassName("invisible");
+                    }
+                }
+            );
+        }
     </script>
 </html>

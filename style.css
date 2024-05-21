@@ -54,6 +54,11 @@ h1 {
     margin: 0;
 }
 
+p {
+    padding: 0;
+    margin: 0;
+}
+
 h1.hanken-grotesk-light {
     font-size: 104px;
     letter-spacing: -1.5px;
@@ -102,4 +107,12 @@ h3 {
 
 img {
     pointer-events: none;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
 }
