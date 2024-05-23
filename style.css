@@ -222,6 +222,17 @@ h5 {
     gap: 4px 0;
 }
 
+.imgContainer.gridImage.portrait {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+}
+
+.imgContainer.gridImage.portrait img {
+    object-fit: cover;
+    /* height: 100%; */
+}
+
 .tag {
     background-color: var(--hotpink);
     color: var(--cream);
