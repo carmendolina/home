@@ -148,7 +148,7 @@ h3 {
 }
 
 h4 {
-    margin: 0;
+    margin: 4px 0;
     font-size: 37px;
     line-height: 40px;
     letter-spacing: 0.25px;
@@ -196,7 +196,7 @@ h5 {
 
 #tabs h3:hover, #tabs h2:hover, .current {
     color: var(--cream);
-    background-color: var(--hotpink);
+    background-color: var(--hotpink) !important;
     transition: 100ms ease-in-out;
     cursor: pointer;
 }
@@ -319,6 +319,12 @@ a:hover {
     cursor: alias;
     color: var(--purple);
     transition: 100ms ease-in-out;
+}
+
+.titles a {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 @media screen and (max-width: 1024px) {
