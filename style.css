@@ -321,7 +321,7 @@ a:hover {
     transition: 100ms ease-in-out;
 }
 
-.titles a {
+.titles a, .titles a span {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
