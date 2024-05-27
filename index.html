@@ -311,6 +311,8 @@
                             allContentSections[j].classList.add("invisible");
                             visibleSections = document.getElementsByClassName("visible");
                             invisibleSections = document.getElementsByClassName("invisible");
+                            allButtons[j].style.color = "var(--hotpink)";
+                            allButtons[j].style.backgroundColor = "var(--cream)";
                         }
                     }
                     (allContentSections[i].children[0]).scrollIntoView({ behavior: "smooth" });
@@ -320,11 +322,15 @@
                         allContentSections[i].classList.add("invisible");
                         visibleSections = document.getElementsByClassName("visible");
                         invisibleSections = document.getElementsByClassName("invisible");
+                        allButtons[i].style.color = "var(--hotpink)";
+                        allButtons[i].style.backgroundColor = "var(--cream)";
                     } else {
                         allContentSections[i].classList.remove("invisible");
                         allContentSections[i].classList.add("visible");
                         visibleSections = document.getElementsByClassName("visible");
                         invisibleSections = document.getElementsByClassName("invisible");
+                        allButtons[i].style.color = "var(--cream)";
+                        allButtons[i].style.backgroundColor = "var(--hotpink)";
                     }
                 }
             );
