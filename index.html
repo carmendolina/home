@@ -219,7 +219,8 @@
                             </div>
                         </div>
                         <div class="desc hanken-grotesk-reg">
-                            <p class="description">Made various iterations on the letter G following certain adjectives like retro, nostalgic, and playful, among others.</p>
+                            <p class="description">Conceptualized the artistic direction of the event. Created all branding elements, including the logotype, visual style, and color palette. Designed over 10 print and digital publicity materials.
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -300,8 +301,6 @@
         var visibleSections = document.getElementsByClassName("visible");
         var invisibleSections = document.getElementsByClassName("invisible");
 
-        console.log(allContentSections);
-
         for(let i = 0; i < allButtons.length; i++) {
             allButtons[i].addEventListener('click', () =>
                 {
@@ -314,6 +313,7 @@
                             invisibleSections = document.getElementsByClassName("invisible");
                         }
                     }
+                    (allContentSections[i].children[0]).scrollIntoView({ behavior: "smooth" });
                     // selects and deselects
                     if(allContentSections[i].classList.contains("visible")) {
                         allContentSections[i].classList.remove("visible");
