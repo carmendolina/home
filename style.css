@@ -240,7 +240,7 @@ h5 {
 }
 
 .post .images img {
-    margin: 0 8px 8px;
+    margin: 8px;
     padding: 0;
     width: calc(100% - 18px);
     /* height: calc(100% - 18px); */
